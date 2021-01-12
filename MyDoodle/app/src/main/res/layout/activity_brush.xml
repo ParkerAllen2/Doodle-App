@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrushActivity"
+    android:orientation="vertical"
+    android:id="@+id/brush"
+    android:background="@color/colorPrimaryDark">
+
+    <!--size layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Size" />
+
+        <!--Relative layout to hold red -->
+        <LinearLayout
+            style="@style/SliderInputLayoutStyle">
+
+            <!--seek bar for red -->
+            <SeekBar
+                android:id="@+id/sizeSlider"
+                style="@style/SliderStyle"
+                android:max="200"
+                android:progress="10"/>
+
+            <!--value of red -->
+            <EditText
+                android:id="@+id/sizeET"
+                style="@style/InputStyle"
+                android:text="10"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--hardness layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Hardness" />
+
+        <!--Relative layout to hold red -->
+        <LinearLayout
+            style="@style/SliderInputLayoutStyle">
+
+            <!--seek bar for red -->
+            <SeekBar
+                android:id="@+id/hardnessSlider"
+                style="@style/SliderStyle"
+                android:max="100"
+                android:progress="100"/>
+
+            <!--value of red -->
+            <EditText
+                android:id="@+id/hardnessET"
+                style="@style/InputStyle"
+                android:text="100"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Shape" />
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+
+            <RadioButton
+                android:id="@+id/circleRB"
+                style="@style/RadioButtonStyle"
+                android:checked="true"
+                android:text="Circle"
+                android:onClick="ChangeShape"/>
+
+            <RadioButton
+                android:id="@+id/squareRB"
+                style="@style/RadioButtonStyle"
+                android:text="Square"
+                android:onClick="ChangeShape"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!--eraser layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Eraser" />
+
+        <CheckBox
+            android:id="@+id/eraserCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/BackButtonStyle"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
