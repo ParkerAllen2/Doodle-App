@@ -1,10 +1,12 @@
 # Doodle-App
 Basic drawing app that was made in Android Studio. The Code folder is a short cut to the code I wrote.
-Features:
+### Features:
 * Drawing on multiple layers
 * rgba color selector
 * Brush size and hardness settings
 * Save images as PNG's
+
+### Code
 
 * **Brush:** Stores the settings for the brush, some examples would be color and brush size.
 
@@ -23,7 +25,7 @@ Features:
 * **UpdateTimer:** Invalidates the the layer so DrawingLayer adds more points to the path
 
 
-TODO/Fix:
+#### TODO/Fix:
 * Refactor it
 * Save images as a file to keep layers
 * Open saved files
